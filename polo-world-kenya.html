@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polo World 🇰🇪 — Designer Polo Shirts Kenya</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  :root {
+    --cream: #F5F0E8;
+    --cream-dark: #EAE2D0;
+    --parchment: #DDD4BC;
+    --gold: #B8A06A;
+    --gold-dark: #8B7340;
+    --gold-light: #D4BC8A;
+    --forest: #1C3028;
+    --forest-mid: #2A4A38;
+    --forest-light: #3D6B50;
+    --charcoal: #1A1A18;
+    --warm-black: #0F0E0C;
+    --text-dark: #1C1A16;
+    --text-mid: #5C5040;
+    --text-light: #8C7E6A;
+    --kenya-red: #BB0000;
+    --kenya-green: #006600;
+    --white: #FDFAF4;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ─── ANNOUNCEMENT BAR ─── */
+  .announce {
+    background: var(--forest);
+    color: var(--gold-light);
+    text-align: center;
+    padding: 10px 20px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* ─── HEADER ─── */
+  header {
+    background: var(--cream);
+    border-bottom: 1px solid var(--parchment);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(28,20,16,0.08);
+  }
+
+  .header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .logo-main {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--forest);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .logo-sub {
+    font-family: 'Jost', sans-serif;
+    font-size: 9px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-top: 3px;
+  }
+
+  nav { display: flex; gap: 36px; }
+
+  nav a {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 3px;
+    transition: color 0.3s;
+  }
+
+  nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 1px;
+    background: var(--gold-dark);
+    transition: width 0.3s;
+  }
+
+  nav a:hover { color: var(--gold-dark); }
+  nav a:hover::after { width: 100%; }
+
+  .header-icons { display: flex; align-items: center; gap: 20px; }
+
+  .icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-dark);
+    font-size: 18px;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .icon-btn:hover { color: var(--gold-dark); }
+
+  .cart-count {
+    position: absolute;
+    top: -6px; right: -8px;
+    background: var(--forest);
+    color: var(--gold-light);
+    font-size: 9px;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    height: 92vh;
+    min-height: 600px;
+    background: var(--forest);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 80px 80px 100px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--gold-dark);
+    padding: 8px 20px;
+    margin-bottom: 40px;
+    width: fit-content;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 6vw, 86px);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.05;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+    display: block;
+  }
+
+  .hero-desc {
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(253,250,244,0.65);
+    line-height: 1.8;
+    max-width: 400px;
+    margin-bottom: 50px;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--forest);
+    padding: 16px 40px;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(184,160,106,0.3);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    padding: 16px 40px;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: 1px solid rgba(253,250,244,0.4);
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 400;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold-light);
+  }
+
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #2A4A38 0%, #1C3028 40%, #0F2018 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  /* Polo shirt SVG illustration */
+  .polo-illustration {
+    width: 280px;
+    height: auto;
+    opacity: 0.9;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-18px); }
+  }
+
+  .hero-decorative-line {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--forest), var(--gold), var(--forest));
+  }
+
+  /* ornament */
+  .hero-ornament {
+    position: absolute;
+    top: 60px; right: 60px;
+    width: 120px; height: 120px;
+    border: 1px solid rgba(184,160,106,0.2);
+    border-radius: 50%;
+  }
+
+  .hero-ornament::before {
+    content: '';
+    position: absolute;
+    inset: 15px;
+    border: 1px solid rgba(184,160,106,0.15);
+    border-radius: 50%;
+  }
+
+  /* ─── SECTION HEADER ─── */
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .section-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 400;
+    color: var(--forest);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--gold-dark);
+  }
+
+  .section-rule {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 20px auto 0;
+  }
+
+  /* ─── CATEGORIES ─── */
+  .categories {
+    padding: 100px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .cat-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 2px;
+    margin-top: 60px;
+  }
+
+  .cat-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 3/4;
+    background: var(--forest);
+  }
+
+  .cat-card:first-child { aspect-ratio: 3/4; }
+
+  .cat-bg {
+    position: absolute;
+    inset: 0;
+    transition: transform 0.6s ease;
+  }
+
+  .cat-card:hover .cat-bg { transform: scale(1.06); }
+
+  .cat-bg-men { background: linear-gradient(160deg, #1C3028 0%, #2A5038 50%, #1A4030 100%); }
+  .cat-bg-women { background: linear-gradient(160deg, #3D2518 0%, #5A3828 50%, #3D2518 100%); }
+  .cat-bg-children { background: linear-gradient(160deg, #1A2840 0%, #2A3A58 50%, #1A2840 100%); }
+
+  .cat-content {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 40px 32px;
+    background: linear-gradient(transparent, rgba(10,10,8,0.8));
+    color: var(--white);
+  }
+
+  .cat-tag {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .cat-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+
+  .cat-link {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 2px;
+    transition: color 0.3s;
+  }
+
+  .cat-link:hover { color: var(--gold-light); }
+
+  /* shirt silhouettes inside category cards */
+  .cat-shirt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    opacity: 0.15;
+  }
+
+  /* ─── FEATURED PRODUCTS ─── */
+  .featured {
+    background: var(--cream-dark);
+    padding: 100px 40px;
+  }
+
+  .featured-inner { max-width: 1400px; margin: 0 auto; }
+
+  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 50px;
+  }
+
+  .filter-btn {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: none;
+    border: 1px solid var(--parchment);
+    color: var(--text-mid);
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: all 0.25s;
+  }
+
+  .filter-btn.active, .filter-btn:hover {
+    background: var(--forest);
+    border-color: var(--forest);
+    color: var(--gold-light);
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+  }
+
+  .product-card {
+    background: var(--cream);
+    cursor: pointer;
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-card:hover { transform: translateY(-4px); }
+
+  .product-img {
+    aspect-ratio: 3/4;
+    background: var(--forest-mid);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-img-bg-1 { background: linear-gradient(145deg, #2A4A38, #3D6B50); }
+  .product-img-bg-2 { background: linear-gradient(145deg, #1C2A3A, #2A3D50); }
+  .product-img-bg-3 { background: linear-gradient(145deg, #3A2A1C, #5A4028); }
+  .product-img-bg-4 { background: linear-gradient(145deg, #2A1C3A, #3D2855); }
+  .product-img-bg-5 { background: linear-gradient(145deg, #1C3A2A, #2A5C3D); }
+  .product-img-bg-6 { background: linear-gradient(145deg, #3A1C2A, #5C2A3D); }
+  .product-img-bg-7 { background: linear-gradient(145deg, #3A3A1C, #5C5C28); }
+  .product-img-bg-8 { background: linear-gradient(145deg, #1C1C3A, #2828 5C); }
+
+  .product-badge {
+    position: absolute;
+    top: 16px; left: 16px;
+    background: var(--forest);
+    color: var(--gold-light);
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    z-index: 2;
+  }
+
+  .badge-new { background: var(--gold-dark); color: var(--cream); }
+  .badge-sale { background: var(--kenya-red); color: #fff; }
+
+  .product-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(28,48,40,0.7);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 30px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .product-card:hover .product-overlay { opacity: 1; }
+
+  .quick-add {
+    background: var(--gold);
+    color: var(--forest);
+    padding: 12px 28px;
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+
+  .quick-add:hover { background: var(--gold-light); }
+
+  .product-info {
+    padding: 20px 20px 24px;
+  }
+
+  .product-category {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 8px;
+  }
+
+  .product-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .product-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .price-current {
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--forest);
+  }
+
+  .price-original {
+    font-size: 13px;
+    color: var(--text-light);
+    text-decoration: line-through;
+  }
+
+  .color-dots {
+    display: flex;
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .color-dot {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .color-dot:hover { transform: scale(1.3); }
+
+  /* ─── HERITAGE STRIP ─── */
+  .heritage {
+    background: var(--forest);
+    padding: 80px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .heritage::before {
+    content: 'POLO WORLD';
+    position: absolute;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 200px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.03);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    letter-spacing: 20px;
+  }
+
+  .heritage-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .heritage-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  .heritage-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .heritage-text {
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(253,250,244,0.6);
+    line-height: 1.9;
+    letter-spacing: 0.3px;
+    margin-bottom: 40px;
+  }
+
+  .heritage-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 50px;
+    padding-top: 50px;
+    border-top: 1px solid rgba(184,160,106,0.2);
+  }
+
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--gold-light);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(253,250,244,0.4);
+  }
+
+  /* ─── COLLECTIONS BANNER ─── */
+  .collections {
+    padding: 100px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .banner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 60px;
+  }
+
+  .banner-card {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .banner-bg {
+    position: absolute;
+    inset: 0;
+    transition: transform 0.6s;
+  }
+
+  .banner-card:hover .banner-bg { transform: scale(1.04); }
+
+  .banner-bg-1 { background: linear-gradient(135deg, #1C3028 0%, #0C1810 100%); }
+  .banner-bg-2 { background: linear-gradient(135deg, #2A1C10 0%, #1A0E08 100%); }
+
+  .banner-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 50px;
+  }
+
+  .banner-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .banner-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 20px;
+    line-height: 1.1;
+  }
+
+  /* ─── TESTIMONIALS ─── */
+  .testimonials {
+    background: var(--cream-dark);
+    padding: 100px 40px;
+  }
+
+  .testimonials-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 60px;
+  }
+
+  .testi-card {
+    background: var(--cream);
+    padding: 40px 36px;
+  }
+
+  .testi-stars {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+  }
+
+  .testi-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  .testi-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .testi-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--white);
+  }
+
+  .av-1 { background: var(--forest); }
+  .av-2 { background: var(--gold-dark); }
+  .av-3 { background: var(--forest-light); }
+
+  .testi-name {
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-dark);
+    letter-spacing: 0.5px;
+  }
+
+  .testi-loc {
+    font-size: 11px;
+    color: var(--text-light);
+    letter-spacing: 0.3px;
+    margin-top: 2px;
+  }
+
+  /* ─── NEWSLETTER ─── */
+  .newsletter {
+    background: var(--charcoal);
+    padding: 80px 40px;
+    text-align: center;
+  }
+
+  .newsletter-inner { max-width: 500px; margin: 0 auto; }
+
+  .newsletter h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .newsletter p {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(253,250,244,0.5);
+    letter-spacing: 0.5px;
+    margin-bottom: 32px;
+  }
+
+  .nl-form {
+    display: flex;
+    border: 1px solid rgba(184,160,106,0.3);
+  }
+
+  .nl-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 16px 20px;
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    color: var(--white);
+    outline: none;
+    letter-spacing: 0.5px;
+  }
+
+  .nl-input::placeholder { color: rgba(253,250,244,0.3); }
+
+  .nl-btn {
+    background: var(--gold);
+    border: none;
+    padding: 16px 28px;
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--forest);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+
+  .nl-btn:hover { background: var(--gold-light); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--warm-black);
+    padding: 80px 40px 40px;
+    color: rgba(253,250,244,0.5);
+  }
+
+  .footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(184,160,106,0.1);
+    margin-bottom: 40px;
+  }
+
+  .footer-brand .logo-main { color: var(--cream); font-size: 24px; }
+  .footer-brand .logo-sub { color: var(--gold-dark); }
+
+  .footer-desc {
+    font-size: 13px;
+    line-height: 1.8;
+    font-weight: 300;
+    margin-top: 20px;
+    max-width: 280px;
+    letter-spacing: 0.3px;
+  }
+
+  .footer-col h4 {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .footer-col ul { list-style: none; }
+
+  .footer-col li {
+    margin-bottom: 12px;
+  }
+
+  .footer-col a {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(253,250,244,0.45);
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: color 0.3s;
+  }
+
+  .footer-col a:hover { color: var(--gold-light); }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-copy {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+  }
+
+  .footer-payment {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .payment-badge {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border-radius: 3px;
+  }
+
+  /* ─── CART DRAWER ─── */
+  .cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15,14,12,0.5);
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  .cart-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .cart-drawer {
+    position: fixed;
+    top: 0; right: -440px;
+    width: 420px;
+    height: 100vh;
+    background: var(--cream);
+    z-index: 201;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: -4px 0 30px rgba(0,0,0,0.15);
+  }
+
+  .cart-drawer.open { right: 0; }
+
+  .cart-header {
+    padding: 28px 32px;
+    border-bottom: 1px solid var(--parchment);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cart-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--forest);
+  }
+
+  .cart-close {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--text-mid);
+    transition: color 0.2s;
+    line-height: 1;
+  }
+
+  .cart-close:hover { color: var(--text-dark); }
+
+  .cart-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px 32px;
+  }
+
+  .cart-item {
+    display: flex;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--cream-dark);
+  }
+
+  .cart-item-img {
+    width: 80px; height: 96px;
+    background: var(--forest-mid);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cart-item-details { flex: 1; }
+
+  .cart-item-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: var(--text-dark);
+  }
+
+  .cart-item-meta {
+    font-size: 11px;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .cart-item-price {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--forest);
+  }
+
+  .cart-footer {
+    padding: 24px 32px;
+    border-top: 1px solid var(--parchment);
+  }
+
+  .cart-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .cart-total-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+
+  .cart-total-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--forest);
+  }
+
+  .checkout-btn {
+    width: 100%;
+    background: var(--forest);
+    color: var(--gold-light);
+    padding: 18px;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  .checkout-btn:hover { background: var(--forest-mid); }
+
+  .continue-btn {
+    width: 100%;
+    background: transparent;
+    color: var(--text-mid);
+    padding: 14px;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1px solid var(--parchment);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .continue-btn:hover { border-color: var(--gold-dark); color: var(--gold-dark); }
+
+  .empty-cart {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-light);
+  }
+
+  .empty-cart p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    margin-top: 16px;
+  }
+
+  .empty-cart span { font-size: 40px; display: block; }
+
+  /* ─── NOTIFICATION ─── */
+  .notification {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--forest);
+    color: var(--gold-light);
+    padding: 14px 28px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 300;
+    opacity: 0;
+    transition: all 0.3s;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .notification.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 1024px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { padding: 60px 40px; }
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    .cat-grid { grid-template-columns: 1fr 1fr; }
+    .cat-card:first-child { grid-column: 1 / -1; aspect-ratio: 16/7; }
+  }
+
+  @media (max-width: 768px) {
+    .header-inner { padding: 0 20px; }
+    nav { display: none; }
+    .hero-left { padding: 50px 24px; }
+    .categories, .featured, .collections { padding: 60px 20px; }
+    .testi-grid { grid-template-columns: 1fr; }
+    .banner-grid { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; gap: 40px; }
+    .cart-drawer { width: 100vw; }
+    .heritage-stats { flex-direction: column; gap: 30px; }
+  }
+
+  /* ─── SCROLL ANIMATIONS ─── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-up:nth-child(2) { transition-delay: 0.1s; }
+  .fade-up:nth-child(3) { transition-delay: 0.2s; }
+  .fade-up:nth-child(4) { transition-delay: 0.3s; }
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCE -->
+<div class="announce">
+  Free delivery across Nairobi &nbsp;·&nbsp; Official dealer of premium polo shirts &nbsp;·&nbsp; Call/WhatsApp: +254 700 000 000
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <span class="logo-main">Polo World 🇰🇪</span>
+      <span class="logo-sub">Nairobi · Est. 2018</span>
+    </a>
+
+    <nav>
+      <a href="#categories">Collections</a>
+      <a href="#featured">Men</a>
+      <a href="#featured">Women</a>
+      <a href="#featured">Children</a>
+      <a href="#heritage">About</a>
+    </nav>
+
+    <div class="header-icons">
+      <button class="icon-btn" title="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="icon-btn" title="Wishlist">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+      <button class="icon-btn" id="cart-trigger" title="Cart">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">New Season · Summer 2025</div>
+    <h1>
+      Dressed in
+      <em>Distinction.</em>
+    </h1>
+    <p class="hero-desc">Curated designer polo shirts for the discerning Kenyan gentleman — and family. Timeless cuts, superior fabrics, old money elegance.</p>
+    <div class="hero-ctas">
+      <a href="#featured" class="btn-primary">Shop Collection</a>
+      <a href="#heritage" class="btn-outline">Our Story</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-image-placeholder">
+      <div class="hero-ornament"></div>
+      <!-- Elegant polo shirt SVG illustration -->
+      <svg class="polo-illustration" viewBox="0 0 260 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Shirt body -->
+        <path d="M50 90 L20 160 L40 165 L45 260 L215 260 L220 165 L240 160 L210 90 L190 80 L180 50 Q150 70 130 70 Q110 70 80 50 L70 80 Z" fill="rgba(184,160,106,0.15)" stroke="rgba(184,160,106,0.4)" stroke-width="1.5"/>
+        <!-- Collar -->
+        <path d="M80 50 Q130 80 130 70 Q130 80 180 50 L170 95 Q150 105 130 102 Q110 105 90 95 Z" fill="rgba(184,160,106,0.25)" stroke="rgba(184,160,106,0.5)" stroke-width="1.5"/>
+        <!-- Left sleeve -->
+        <path d="M50 90 L20 160 L40 165 L65 100" fill="rgba(184,160,106,0.12)" stroke="rgba(184,160,106,0.35)" stroke-width="1.5"/>
+        <!-- Right sleeve -->
+        <path d="M210 90 L240 160 L220 165 L195 100" fill="rgba(184,160,106,0.12)" stroke="rgba(184,160,106,0.35)" stroke-width="1.5"/>
+        <!-- Chest stripe -->
+        <path d="M95 115 L165 115" stroke="rgba(184,160,106,0.3)" stroke-width="8"/>
+        <!-- Buttons -->
+        <circle cx="130" cy="100" r="3" fill="rgba(184,160,106,0.5)"/>
+        <circle cx="130" cy="112" r="3" fill="rgba(184,160,106,0.5)"/>
+        <!-- Logo crest area -->
+        <rect x="100" y="130" width="30" height="24" rx="2" fill="none" stroke="rgba(184,160,106,0.3)" stroke-width="1"/>
+        <text x="115" y="147" font-family="serif" font-size="10" fill="rgba(184,160,106,0.5)" text-anchor="middle" font-style="italic">PW</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="hero-decorative-line"></div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories" id="categories">
+  <div class="section-header">
+    <span class="section-label">Shop by</span>
+    <h2 class="section-title">Collections for <em>Every Generation</em></h2>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="cat-grid">
+    <!-- Men -->
+    <div class="cat-card" onclick="filterProducts('men')">
+      <div class="cat-bg cat-bg-men"></div>
+      <svg class="cat-shirt" width="180" height="220" viewBox="0 0 260 320">
+        <path d="M50 90 L20 160 L40 165 L45 260 L215 260 L220 165 L240 160 L210 90 L190 80 L180 50 Q150 70 130 70 Q110 70 80 50 L70 80 Z" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+        <path d="M80 50 Q130 80 130 70 Q130 80 180 50 L170 95 Q150 105 130 102 Q110 105 90 95 Z" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+      </svg>
+      <div class="cat-content">
+        <span class="cat-tag">Signature</span>
+        <div class="cat-name">Men</div>
+        <a href="#featured" class="cat-link">Explore →</a>
+      </div>
+    </div>
+
+    <!-- Women -->
+    <div class="cat-card" onclick="filterProducts('women')">
+      <div class="cat-bg cat-bg-women"></div>
+      <div class="cat-content">
+        <span class="cat-tag">Refined</span>
+        <div class="cat-name">Women</div>
+        <a href="#featured" class="cat-link">Explore →</a>
+      </div>
+    </div>
+
+    <!-- Children -->
+    <div class="cat-card" onclick="filterProducts('children')">
+      <div class="cat-bg cat-bg-children"></div>
+      <div class="cat-content">
+        <span class="cat-tag">Heritage</span>
+        <div class="cat-name">Children</div>
+        <a href="#featured" class="cat-link">Explore →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="featured" id="featured">
+  <div class="featured-inner">
+    <div class="section-header">
+      <span class="section-label">Curated Selection</span>
+      <h2 class="section-title">Featured <em>Pieces</em></h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" onclick="filterProducts('all', this)">All</button>
+      <button class="filter-btn" onclick="filterProducts('men', this)">Men</button>
+      <button class="filter-btn" onclick="filterProducts('women', this)">Women</button>
+      <button class="filter-btn" onclick="filterProducts('children', this)">Children</button>
+      <button class="filter-btn" onclick="filterProducts('new', this)">New Arrivals</button>
+      <button class="filter-btn" onclick="filterProducts('sale', this)">Sale</button>
+    </div>
+
+    <div class="products-grid" id="products-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card" data-category="men">
+        <div class="product-img product-img-bg-1">
+          <svg width="90" height="110" viewBox="0 0 260 320" opacity="0.6">
+            <path d="M50 90 L20 160 L40 165 L45 260 L215 260 L220 165 L240 160 L210 90 L190 80 L180 50 Q150 70 130 70 Q110 70 80 50 L70 80 Z" fill="rgba(245,240,232,0.2)" stroke="rgba(245,240,232,0.5)" stroke-width="2"/>
+            <path d="M80 50 Q130 80 130 70 Q130 80 180 50 L170 95 Q150 105 130 102 Q110 105 90 95 Z" fill="rgba(245,240,232,0.3)" stroke="rgba(245,240,232,0.6)" stroke-width="2"/>
+          </svg>
+          <div class="product-badge">Men</div>
+          <div class="product-overlay">
+            <button class="quick-add" onclick="addToCart('The Savanna Polo', 'KES 4,800', event)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Men · Classic Fit</div>
+          <div class="product-name">The Savanna Polo</div>
+          <div class="product-price">
+            <span class="price-current">KES 4,800</span>
+          </div>
+          <div class="color-dots">
+            <div class="color-dot" style="background:#1C3028" title="Forest"></div>
+            <div class="color-dot" style="background:#8B7340" title="Khaki"></div>
+            <div class="color-dot" style="background:#1C1C1C" title="Onyx"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card" data-category="men new">
+        <div class="product-img product-img-bg-2">
+          <svg width="90" height="110" viewBox="0 0 260 320" opacity="0.6">
+            <path d="M50 90 L20 160 L40 165 L45 260 L215 260 L220 165 L240 160 L210 90 L190 80 L180 50 Q150 70 130 70 Q110 70 80 50 L70 80 Z" fill="rgba(245,240,232,0.2)" stroke="rgba(245,240,232,0.5)" stroke-width="2"/>
+            <path d="M80 50 Q130 80 130 70 Q130 80 180 50 L170 95 Q150 105 130 102 Q110 105 90 95 Z" fill="rgba(245,240,232,0.3)" stroke="rgba(245,240,232,0.6)" stroke-width="2"/>
+          </svg>
+          <div class="product-badge badge-new">New</div>
+          <div class="product-overlay">
+            <button class="quick-add" onclick="addToCart('The Nairobi Club', 'KES 6,200', event)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Men · Slim Fit</div>
+          <div class="product-name">The Nairobi Club</div>
+          <div class="product-price">
+            <span class="price-current">KES 6,200</span>
+          </div>
+          <div class="color-dots">
+            <div class="color-dot" style="background:#1A2840" title="Navy"></div>
+            <div class="color-dot" style="background:#B8A06A" title="Champagne"></div>
+            <div class="color-dot" style="background:#5C2A1C" title="Burgundy"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card" data-category="women">
+        <div class="product-img product-img-bg-3">
+          <svg width="90" height="110" viewBox="0 0 260 320" opacity="0.6">
+            <path d="M50 90 L20 160 L40 165 L45 260 L215 260 L220 165 L240 160 L210 90 L190 80 L180 50 Q150 70 130 70 Q110 70 80 50 L70 80 Z" fill="rgba(245,240,232,0.2)" stroke="rgba(245,240,232,0.5)" stroke-width="2"/>
+            <path d="M80 50 Q130 80 130 70 Q130 80 180 50 L170 95 Q150 105 130 102 Q110 105 90 95 Z" fill="rgba(245,240,232,0.3)" stroke="rgba(245,240,232,0.6)" stroke-width="2"/>
+          </svg>
+          <div class="product-badge">Women</div>
+          <div class="product-overlay">
+            <button class="quick-add" onclick="addToCart('The Rift Valley Rose', 'KES 5,400', event)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Women · Fitted</div>
+          <div class="product-name">The Rift Valley Rose</div>
+          <div class="product-price">
+            <span class="price-current">KES 5,400</span>
+          </div>
+          <div class="color-dots">
+            <div class="color-dot" style="background:#8B3A5C" title="Rose"></div>
+            <div class="color-dot" style="background:#F5F0E8" title="Cream"></div>
+            <div class="color-dot" style="background:#2A4A38" title="Sage"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card" data-category="women new">
+        <div class="product-img product-img-bg-4">
+          <svg width="90" height="110" viewBox="0 0 260 320" opacity="0.6">
+            <path d="M50 90 L20 160 L40 165 L45 260 L215 260 L220 165 L240 160 L210 90 L190 80 L180 50 Q150 70 130 70 Q110 70 80 50 L70 80 Z" fill="rgba(245,240,232,0.2)" stroke="rgba(245,240,232,0.5)" stroke-width="2"/>
+            <path d="M80 50 Q130 80 130 70 Q130 80 180 50 L170 95 Q150 105 130 102 Q110 105 90 95 Z" fill="rgba(245,240,232,0.3)" stroke="rgba(245,240,232,0.6)" stroke-width="2"/>
+          </svg>
+          <div class="product-badge badge-new">New</div>
+          <div class="product-overlay">
+            <button class="quick-add" onclick="addToCart('The Lamu Linen Polo', 'KES 7,100', event)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Women · Relaxed</div>
+          <div class="product-name">The Lamu Linen Polo</div>
+          <div class="product-price">
+            <span class="price-current">KES 7,100</span>
+          </div>
+          <div class="color-dots">
+            <div class="color-dot" style="background:#4A2870" title="Plum"></div>
+            <div class="color-dot" style="background:#D4BC8A" title="Dune"></div>
+            <div class="color-dot" style="background:#1C3028" title="Forest"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card" data-category="men sale">
+        <div class="product-img product-img-bg-5">
+          <svg width="90" height="110" viewBox="0 0 260 320" opacity="0.6">
+            <path d="M50 90 L20 160 L40 165 L45 260 L215 260 L220 165 L240 160 L210 90 L190 80 L180 50 Q150 70 130 70 Q110 70 80 50 L70 80 Z" fill="rgba(245,240,232,0.2)" stroke="rgba(245,240,232,0.5)" stroke-width="2"/>
+            <path d="M80 50 Q130 80 130 70 Q130 80 180 50 L170 95 Q150 105 130 102 Q110 105 90 95 Z" fill="rgba(245,240,232,0.3)" stroke="rgba(245,240,232,0.6)" stroke-width="2"/>
+          </svg>
+          <div class="product-badge badge-sale">Sale</div>
+          <div class="product-overlay">
+            <button class="quick-add" onclick="addToCart('The Mara Classic', 'KES 3,600', event)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Men · Classic</div>
+          <div class="product-name">The Mara Classic</div>
+          <div class="product-price">
+            <span class="price-current">KES 3,600</span>
+            <span class="price-original">KES 4,800</span>
+          </div>
+          <div class="color-dots">
+            <div class="color-dot" style="background:#1C3028"></div>
+            <div class="color-dot" style="background:#3D6B50"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card" data-category="children">
+        <div class="product-img product-img-bg-6">
+          <svg width="90" height="110" viewBox="0 0 260 320" opacity="0.6">
+            <path d="M50 90 L20 160 L40 165 L45 260 L215 260 L220 165 L240 160 L210 90 L190 80 L180 50 Q150 70 130 70 Q110 70 80 50 L70 80 Z" fill="rgba(245,240,232,0.2)" stroke="rgba(245,240,232,0.5)" stroke-width="2"/>
+            <path d="M80 50 Q130 80 130 70 Q130 80 180 50 L170 95 Q150 105 130 102 Q110 105 90 95 Z" fill="rgba(245,240,232,0.3)" stroke="rgba(245,240,232,0.6)" stroke-width="2"/>
+          </svg>
+          <div class="product-badge">Children</div>
+          <div class="product-overlay">
+            <button class="quick-add" onclick="addToCart('Little Heritage Polo', 'KES 2,900', event)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Children · Ages 4–12</div>
+          <div class="product-name">Little Heritage Polo</div>
+          <div class="product-price">
+            <span class="price-current">KES 2,900</span>
+          </div>
+          <div class="color-dots">
+            <div class="color-dot" style="background:#5C2A1C"></div>
+            <div class="color-dot" style="background:#1A2840"></div>
+            <div class="color-dot" style="background:#1C3028"></div>
+            <div class="color-dot" style="background:#B8A06A"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="product-card" data-category="children new">
+        <div class="product-img product-img-bg-7">
+          <svg width="90" height="110" viewBox="0 0 260 320" opacity="0.6">
+            <path d="M50 90 L20 160 L40 165 L45 260 L215 260 L220 165 L240 160 L210 90 L190 80 L180 50 Q150 70 130 70 Q110 70 80 50 L70 80 Z" fill="rgba(245,240,232,0.2)" stroke="rgba(245,240,232,0.5)" stroke-width="2"/>
+            <path d="M80 50 Q130 80 130 70 Q130 80 180 50 L170 95 Q150 105 130 102 Q110 105 90 95 Z" fill="rgba(245,240,232,0.3)" stroke="rgba(245,240,232,0.6)" stroke-width="2"/>
+          </svg>
+          <div class="product-badge badge-new">New</div>
+          <div class="product-overlay">
+            <button class="quick-add" onclick="addToCart('Junior Crest Polo', 'KES 3,200', event)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Children · Ages 2–6</div>
+          <div class="product-name">Junior Crest Polo</div>
+          <div class="product-price">
+            <span class="price-current">KES 3,200</span>
+          </div>
+          <div class="color-dots">
+            <div class="color-dot" style="background:#5C5C1C"></div>
+            <div class="color-dot" style="background:#3A3A8A"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product-card" data-category="men">
+        <div class="product-img product-img-bg-8">
+          <svg width="90" height="110" viewBox="0 0 260 320" opacity="0.6">
+            <path d="M50 90 L20 160 L40 165 L45 260 L215 260 L220 165 L240 160 L210 90 L190 80 L180 50 Q150 70 130 70 Q110 70 80 50 L70 80 Z" fill="rgba(245,240,232,0.2)" stroke="rgba(245,240,232,0.5)" stroke-width="2"/>
+            <path d="M80 50 Q130 80 130 70 Q130 80 180 50 L170 95 Q150 105 130 102 Q110 105 90 95 Z" fill="rgba(245,240,232,0.3)" stroke="rgba(245,240,232,0.6)" stroke-width="2"/>
+          </svg>
+          <div class="product-badge">Men</div>
+          <div class="product-overlay">
+            <button class="quick-add" onclick="addToCart('The Ngong Hills Edition', 'KES 8,500', event)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Men · Premium</div>
+          <div class="product-name">The Ngong Hills Edition</div>
+          <div class="product-price">
+            <span class="price-current">KES 8,500</span>
+          </div>
+          <div class="color-dots">
+            <div class="color-dot" style="background:#1C1C3A"></div>
+            <div class="color-dot" style="background:#B8A06A"></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /products-grid -->
+  </div>
+</section>
+
+<!-- HERITAGE -->
+<section class="heritage" id="heritage">
+  <div class="heritage-inner">
+    <div class="section-label" style="color:var(--gold);">Our Story</div>
+    <h2 class="heritage-title">
+      Born in Nairobi,<br>
+      <em>Dressed for the World.</em>
+    </h2>
+    <p class="heritage-text">
+      Polo World was founded on a simple belief: that Kenyan men, women, and children deserve access to timeless, world-class polo shirts — crafted with the same standard demanded by the finest estates of Europe, yet woven with the spirit of East Africa. Every thread carries heritage. Every stitch, intention.
+    </p>
+    <a href="#" class="btn-primary">Discover Our Heritage</a>
+
+    <div class="heritage-stats">
+      <div>
+        <div class="stat-num">7+</div>
+        <div class="stat-label">Years of Excellence</div>
+      </div>
+      <div>
+        <div class="stat-num">40+</div>
+        <div class="stat-label">Designer Styles</div>
+      </div>
+      <div>
+        <div class="stat-num">12K+</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div>
+        <div class="stat-num">3</div>
+        <div class="stat-label">Nairobi Showrooms</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLECTIONS -->
+<section class="collections" id="collections">
+  <div class="section-header">
+    <span class="section-label">Limited Editions</span>
+    <h2 class="section-title">Exclusive <em>Collections</em></h2>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="banner-grid">
+    <div class="banner-card">
+      <div class="banner-bg banner-bg-1"></div>
+      <div class="banner-content">
+        <div class="banner-label">Gentleman's Collection</div>
+        <div class="banner-title">The Old Money<br>Summer Edit</div>
+        <a href="#featured" class="btn-outline" style="width:fit-content; padding:12px 28px; font-size:10px;">Shop Now</a>
+      </div>
+    </div>
+    <div class="banner-card">
+      <div class="banner-bg banner-bg-2"></div>
+      <div class="banner-content">
+        <div class="banner-label">Family Collection</div>
+        <div class="banner-title">Dress the<br>Whole Family</div>
+        <a href="#featured" class="btn-outline" style="width:fit-content; padding:12px 28px; font-size:10px;">Shop Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="testimonials-inner">
+    <div class="section-header">
+      <span class="section-label">Client Stories</span>
+      <h2 class="section-title">Words from Our <em>Patrons</em></h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi-card fade-up">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The quality is exceptional — I've worn luxury polo shirts from London and Milan, and Polo World stands right there with them. Proudly Kenyan, world-class standard."</p>
+        <div class="testi-author">
+          <div class="testi-avatar av-1">JM</div>
+          <div>
+            <div class="testi-name">James Mwangi</div>
+            <div class="testi-loc">Westlands, Nairobi</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card fade-up">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"I ordered the women's fitted polo and it arrived beautifully packaged. The fabric breathes so well in Nairobi weather. I've already ordered two more for my daughters."</p>
+        <div class="testi-author">
+          <div class="testi-avatar av-2">AO</div>
+          <div>
+            <div class="testi-name">Amina Odhiambo</div>
+            <div class="testi-loc">Karen, Nairobi</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card fade-up">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Bought matching family polos for a golf day at Muthaiga. We were the best dressed family on the course. Polo World is the real deal — classic, refined, Kenyan."</p>
+        <div class="testi-author">
+          <div class="testi-avatar av-3">DK</div>
+          <div>
+            <div class="testi-name">David Kamau</div>
+            <div class="testi-loc">Muthaiga, Nairobi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="newsletter-inner">
+    <h3>Join the Inner Circle</h3>
+    <p>Exclusive drops, early access, and curated style notes — delivered to your inbox.</p>
+    <div class="nl-form">
+      <input type="email" class="nl-input" placeholder="Your email address">
+      <button class="nl-btn">Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-main">Polo World 🇰🇪</span>
+          <span class="logo-sub">Nairobi · Est. 2018</span>
+        </div>
+        <p class="footer-desc">Designer polo shirts for the discerning family. Timeless craft, Kenyan pride, old money elegance — available across Nairobi.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">Men's Collection</a></li>
+          <li><a href="#">Women's Collection</a></li>
+          <li><a href="#">Children's Range</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Sale</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Showrooms</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Stockists</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Care Instructions</a></li>
+          <li><a href="tel:+254700000000">+254 700 000 000</a></li>
+          <li><a href="https://wa.me/254700000000">WhatsApp Us</a></li>
+          <li><a href="mailto:hello@poloworld.co.ke">hello@poloworld.co.ke</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Polo World Kenya. All rights reserved.</div>
+      <div class="footer-payment">
+        <div class="payment-badge">M-Pesa</div>
+        <div class="payment-badge">Visa</div>
+        <div class="payment-badge">Mastercard</div>
+        <div class="payment-badge">Airtel Money</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-header">
+    <span class="cart-title">Your Selection</span>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-body" id="cart-body">
+    <div class="empty-cart">
+      <span>🛍️</span>
+      <p>Your cart is empty</p>
+    </div>
+  </div>
+  <div class="cart-footer" id="cart-footer" style="display:none">
+    <div class="cart-total-row">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-price" id="cart-total">KES 0</span>
+    </div>
+    <button class="checkout-btn">Proceed to Checkout</button>
+    <button class="continue-btn" onclick="closeCart()">Continue Shopping</button>
+  </div>
+</div>
+
+<!-- NOTIFICATION -->
+<div class="notification" id="notification"></div>
+
+<script>
+  // ─── CART STATE ───
+  let cart = [];
+  let cartCount = 0;
+
+  function addToCart(name, price, event) {
+    event.stopPropagation();
+    const priceNum = parseInt(price.replace(/[^0-9]/g, ''));
+    
+    const existing = cart.find(i => i.name === name);
+    if (existing) {
+      existing.qty++;
+    } else {
+      cart.push({ name, price, priceNum, qty: 1 });
+    }
+    
+    cartCount++;
+    document.getElementById('cart-count').textContent = cartCount;
+    
+    renderCart();
+    showNotification('Added to cart — ' + name);
+    openCart();
+  }
+
+  function renderCart() {
+    const body = document.getElementById('cart-body');
+    const footer = document.getElementById('cart-footer');
+    const totalEl = document.getElementById('cart-total');
+
+    if (cart.length === 0) {
+      body.innerHTML = '<div class="empty-cart"><span>🛍️</span><p>Your cart is empty</p></div>';
+      footer.style.display = 'none';
+      return;
+    }
+
+    footer.style.display = 'block';
+    
+    let total = 0;
+    body.innerHTML = cart.map(item => {
+      total += item.priceNum * item.qty;
+      return `
+        <div class="cart-item">
+          <div class="cart-item-img">
+            <svg width="45" height="55" viewBox="0 0 260 320">
+              <path d="M50 90 L20 160 L40 165 L45 260 L215 260 L220 165 L240 160 L210 90 L190 80 L180 50 Q150 70 130 70 Q110 70 80 50 L70 80 Z" fill="rgba(245,240,232,0.2)" stroke="rgba(245,240,232,0.5)" stroke-width="3"/>
+              <path d="M80 50 Q130 80 130 70 Q130 80 180 50 L170 95 Q150 105 130 102 Q110 105 90 95 Z" fill="rgba(245,240,232,0.3)" stroke="rgba(245,240,232,0.6)" stroke-width="3"/>
+            </svg>
+          </div>
+          <div class="cart-item-details">
+            <div class="cart-item-name">${item.name}</div>
+            <div class="cart-item-meta">Qty: ${item.qty}</div>
+            <div class="cart-item-price">${item.price}</div>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    totalEl.textContent = 'KES ' + total.toLocaleString();
+  }
+
+  function openCart() {
+    document.getElementById('cart-overlay').classList.add('open');
+    document.getElementById('cart-drawer').classList.add('open');
+  }
+
+  function closeCart() {
+    document.getElementById('cart-overlay').classList.remove('open');
+    document.getElementById('cart-drawer').classList.remove('open');
+  }
+
+  document.getElementById('cart-trigger').addEventListener('click', openCart);
+
+  // ─── NOTIFICATION ───
+  function showNotification(msg) {
+    const el = document.getElementById('notification');
+    el.textContent = msg;
+    el.classList.add('show');
+    setTimeout(() => el.classList.remove('show'), 2500);
+  }
+
+  // ─── FILTER ───
+  function filterProducts(cat, btn) {
+    if (btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    document.querySelectorAll('.product-card').forEach(card => {
+      const cats = card.dataset.category || '';
+      if (cat === 'all' || cats.includes(cat)) {
+        card.style.display = 'block';
+        card.style.animation = 'none';
+        card.offsetHeight;
+        card.style.animation = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (cat !== 'all') {
+      document.getElementById('featured').scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // ─── SCROLL ANIMATIONS ───
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // ─── NEWSLETTER ───
+  document.querySelector('.nl-btn').addEventListener('click', () => {
+    const input = document.querySelector('.nl-input');
+    if (input.value && input.value.includes('@')) {
+      showNotification('Welcome to the Inner Circle!');
+      input.value = '';
+    } else {
+      showNotification('Please enter a valid email.');
+    }
+  });
+</script>
+
+</body>
+</html>
